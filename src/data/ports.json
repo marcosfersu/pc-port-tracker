@@ -30,5 +30,13 @@
     "description": "PC Port",
     "category": "Nintendo Wii",
     "image": "/ports/mario-galaxy.webp"
+  },
+  {
+    "id": "gow-3",
+    "name": "God of War III Remastered",
+    "repository": "FelipePrado0/SpartanPort",
+    "description": "PC Port",
+    "category": "PlayStation 4",
+    "image": "/ports/gow-3.webp"
   }
 ]
