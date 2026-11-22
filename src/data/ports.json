@@ -10,7 +10,7 @@
   {
     "id": "bloodborne",
     "name": "Bloodborne",
-    "repository": "https://github.com/Supermedo/bloodborne_pc",
+    "repository": "Supermedo/bloodborne_pc",
     "description": "Native PC port",
     "category": "PlayStation 4",
     "image": "/ports/bloodborne.webp"
