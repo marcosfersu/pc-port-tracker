@@ -52,5 +52,20 @@
     "url": "https://github.com/keepvaibin/nebula/releases/tag/v1.0.2",
     "prerelease": false,
     "isNew": false
+  },
+  "gow-3": {
+    "id": "gow-3",
+    "name": "God of War III Remastered",
+    "repository": "FelipePrado0/SpartanPort",
+    "description": "PC Port",
+    "category": "PlayStation 4",
+    "image": "/ports/gow-3.webp",
+    "hasRelease": true,
+    "tag": "windows-v3.2.1",
+    "title": "SpartanPort 3.2.1",
+    "date": "2026-11-16T02:41:14Z",
+    "url": "https://github.com/FelipePrado0/SpartanPort/releases/tag/windows-v3.2.1",
+    "prerelease": false,
+    "isNew": false
   }
 }
