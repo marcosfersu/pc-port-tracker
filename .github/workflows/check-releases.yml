@@ -13,9 +13,15 @@ jobs:
   check-releases:
     runs-on: ubuntu-latest
 
+    concurrency:
+      group: release-checker
+      cancel-in-progress: false
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -38,5 +44,6 @@ jobs:
             echo "No new releases"
           else
             git commit -m "chore: update PC port releases"
-            git push
+            git pull --rebase origin main
+            git push origin main
           fi
