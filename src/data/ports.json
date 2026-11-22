@@ -22,13 +22,5 @@
     "description": "PC Port",
     "category": "Nintendo GameCube",
     "image": "/ports/twilight-princess.webp"
-  },
-  {
-    "id": "mario-galaxy",
-    "name": "Super Mario Galaxy",
-    "repository": "keepvaibin/nebula",
-    "description": "PC Port",
-    "category": "Nintendo Wii",
-    "image": "/ports/mario-galaxy.webp"
   }
 ]
