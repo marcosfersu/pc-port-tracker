@@ -23,7 +23,7 @@ jobs:
           node-version: 22
 
       - name: Check releases
-        run: node scripts/check-releases.mjs
+        run: node src/scripts/check-releases.mjs
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
