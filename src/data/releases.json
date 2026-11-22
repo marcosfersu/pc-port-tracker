@@ -37,5 +37,20 @@
     "category": "Nintendo GameCube",
     "image": "/ports/twilight-princess.webp",
     "hasRelease": false
+  },
+  "mario-galaxy": {
+    "id": "mario-galaxy",
+    "name": "Super Mario Galaxy",
+    "repository": "keepvaibin/nebula",
+    "description": "PC Port",
+    "category": "Nintendo Wii",
+    "image": "/ports/mario-galaxy.webp",
+    "hasRelease": true,
+    "tag": "v1.0.2",
+    "title": "Nebula 1.0.2",
+    "date": "2026-10-27T05:44:55Z",
+    "url": "https://github.com/keepvaibin/nebula/releases/tag/v1.0.2",
+    "prerelease": false,
+    "isNew": false
   }
 }
