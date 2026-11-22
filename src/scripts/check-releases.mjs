@@ -12,7 +12,8 @@ try {
   previousReleases = {};
 }
 
-const releases = {};
+// Conservamos los datos anteriores.
+const releases = { ...previousReleases };
 
 for (const port of ports) {
   const url = `https://api.github.com/repos/${port.repository}/releases?per_page=10`;
@@ -27,12 +28,20 @@ for (const port of ports) {
 
     if (!response.ok) {
       console.error(`Error en ${port.name}: ${response.status}`);
+
+      // Si todavía no existe, lo agregamos igualmente.
+      if (!releases[port.id]) {
+        releases[port.id] = {
+          ...port,
+          hasRelease: false,
+        };
+      }
+
       continue;
     }
 
     const data = await response.json();
 
-    // Último release publicado, incluyendo prereleases.
     const latest = data
       .filter((release) => !release.draft)
       .sort((a, b) => new Date(b.published_at) - new Date(a.published_at))[0];
@@ -62,6 +71,13 @@ for (const port of ports) {
     console.log(`${port.name}: ${latest.tag_name}`);
   } catch (error) {
     console.error(`Error en ${port.name}:`, error);
+
+    if (!releases[port.id]) {
+      releases[port.id] = {
+        ...port,
+        hasRelease: false,
+      };
+    }
   }
 }
 
