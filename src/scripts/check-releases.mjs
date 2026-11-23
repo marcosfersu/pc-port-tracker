@@ -81,4 +81,17 @@ for (const port of ports) {
   }
 }
 
+const lastUpdatePath = "./src/data/last-update.json";
+
+await fs.writeFile(
+  lastUpdatePath,
+  JSON.stringify(
+    {
+      lastUpdate: new Date().toISOString(),
+    },
+    null,
+    2,
+  ),
+);
+
 await fs.writeFile(releasesPath, JSON.stringify(releases, null, 2));

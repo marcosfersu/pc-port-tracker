@@ -1,11 +1,20 @@
 ---
 import releases from "../data/releases.json";
+import lastUpdate from "../data/last-update.json";
 import PortCard from "../components/PortCard.astro";
 import Layout from "../layouts/Layout.astro";
 
 const ports = Object.values(releases).sort(
   (a, b) => new Date(b.date || 0).getTime() - new Date(a.date || 0).getTime(),
 );
+
+const formattedDate = lastUpdate.lastUpdate
+  ? new Intl.DateTimeFormat("es-AR", {
+      dateStyle: "short",
+      timeStyle: "short",
+      timeZone: "America/Argentina/Buenos_Aires",
+    }).format(new Date(lastUpdate.lastUpdate))
+  : "Pendiente";
 ---
 
 <Layout>
@@ -13,6 +22,8 @@ const ports = Object.values(releases).sort(
     <h1 class="text-4xl font-bold">PC Port Tracker</h1>
 
     <p class="mt-4 text-gray-500">Latest releases from PC port projects.</p>
+
+    <p class="mt-2 text-sm text-gray-400">Last update: {formattedDate}</p>
 
     <section class="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
       {ports.map((port) => (
