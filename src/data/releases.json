@@ -67,5 +67,20 @@
     "url": "https://github.com/FelipePrado0/SpartanPort/releases/tag/windows-v3.2.1",
     "prerelease": false,
     "isNew": false
+  },
+  "metroid-prime": {
+    "id": "metroid-prime",
+    "name": "Metroid Prime Remastered",
+    "repository": "gminustwo/primerecomp",
+    "description": "PC Port",
+    "category": "Nintendo Switch",
+    "image": "/ports/metroid-prime.webp",
+    "hasRelease": true,
+    "tag": "v0.1.2",
+    "title": "PrimeRecomp v0.1.2: Discord status, gyro through Steam Input with any controller",
+    "date": "2026-11-20T05:25:46Z",
+    "url": "https://github.com/gminustwo/primerecomp/releases/tag/v0.1.2",
+    "prerelease": false,
+    "isNew": false
   }
 }
