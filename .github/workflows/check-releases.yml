@@ -34,6 +34,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Commit changes
+        id: commit
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -41,9 +42,19 @@ jobs:
           git add src/data/releases.json src/data/last-update.json
 
           if git diff --cached --quiet; then
-            echo "No new releases"
+            echo "No changes"
+            echo "changed=false" >> "$GITHUB_OUTPUT"
           else
             git commit -m "chore: update PC port releases"
             git pull --rebase origin main
             git push origin main
+            echo "changed=true" >> "$GITHUB_OUTPUT"
           fi
+
+      - name: Trigger Vercel deployment
+        if: steps.commit.outputs.changed == 'true'
+        run: |
+          curl --fail --silent --show-error \
+            -X POST "$VERCEL_DEPLOY_HOOK"
+        env:
+          VERCEL_DEPLOY_HOOK: ${{ secrets.VERCEL_DEPLOY_HOOK }}
