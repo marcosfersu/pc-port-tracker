@@ -46,5 +46,13 @@
     "description": "PC Port",
     "category": "PlayStation 4",
     "image": "/ports/gow-3.webp"
+  },
+  {
+    "id": "metroid-prime",
+    "name": "Metroid Prime Remastered",
+    "repository": "gminustwo/primerecomp",
+    "description": "PC Port",
+    "category": "Nintendo Switch",
+    "image": "/ports/metroid-prime.webp"
   }
 ]
