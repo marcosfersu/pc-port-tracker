@@ -46,5 +46,13 @@
     "description": "PC Port",
     "category": "Nintendo Switch",
     "image": "/ports/metroid-prime.webp"
+  },
+  {
+    "id": "zelda-botw",
+    "name": "The Legend of Zelda: Breath of the Wild",
+    "repository": "Revivedx/SavageWindRecomp",
+    "description": "PC Port",
+    "category": "Nintendo Switch",
+    "image": "/ports/zelda-botw.webp"
   }
 ]
