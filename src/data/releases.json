@@ -7,12 +7,12 @@
     "category": "Nintendo Switch 2",
     "image": "/ports/dkb.webp",
     "hasRelease": true,
-    "tag": "v0.5.2",
-    "title": "DKB Recomp v0.5.2",
-    "date": "2026-11-24T11:20:38Z",
-    "url": "https://github.com/Lucas-blip-png/dkb-pc-recomp/releases/tag/v0.5.2",
+    "tag": "v0.5.3",
+    "title": "DKB Recomp v0.5.3",
+    "date": "2026-11-28T07:38:11Z",
+    "url": "https://github.com/Lucas-blip-png/dkb-pc-recomp/releases/tag/v0.5.3",
     "prerelease": false,
-    "isNew": false
+    "isNew": true
   },
   "bloodborne": {
     "id": "bloodborne",
